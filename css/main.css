@@ -385,3 +385,155 @@
     text-align: left;
   }
 }
+
+/* =========================
+   TOP MAIN (Scoped)
+   ※ <main class="top-main"> 内だけに適用
+========================= */
+
+.top-main {
+  background: #f8d7e6; /* スクショの薄ピンク */
+  padding: 18px 0 40px;
+}
+
+/* 中央コンテンツ幅 */
+.top-main_hero,
+.top-main_noticeInner,
+.top-main_cards {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO
+========================= */
+.top-main_hero {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.top-main_heroImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   NOTICE BAR
+========================= */
+.top-main_notice {
+  margin-top: 10px;
+}
+
+.top-main_noticeInner {
+  background: #f3b8cd; /* 濃いめピンク帯 */
+  border-radius: 6px;
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.top-main_noticeLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.top-main_noticeTitle {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.top-main_noticeText {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.top-main_noticeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #111;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.top-main_noticeBtn:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* =========================
+   CARDS (2x2)
+========================= */
+.top-main_cards {
+  margin-top: 18px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.top-main_card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-main_cardImgWrap {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.top-main_cardImg {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* スクショに近い比率 */
+  object-fit: cover;
+  display: block;
+}
+
+.top-main_cardLink {
+  text-align: center;
+  margin: 10px 0 0;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .top-main {
+    padding: 14px 0 30px;
+  }
+
+  .top-main_noticeInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-main_noticeBtn {
+    align-self: flex-end;
+  }
+
+  .top-main_cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
